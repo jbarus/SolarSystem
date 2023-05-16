@@ -109,7 +109,7 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	GLFWwindow* window = glfwCreateWindow(width, height, " Gajewski to smierdziel", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(width, height, "Solar System", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
@@ -266,50 +266,50 @@ int main()
 
 	glm::vec4 lightColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 	glm::vec3 lightPos = glm::vec3(0.0f, 0.0f, 0.0f);
-	glm::mat4 lightModel = glm::mat4(10.0f);
+	glm::mat4 lightModel = glm::mat4(250.0f);
 
 	//merkury
 
-	glm::vec3 pyramidPos = glm::vec3(1.0f, 0.0f, 0.0f);
+	glm::vec3 pyramidPos = glm::vec3(30.0f, 0.0f, -14.0f);
 	glm::mat4 pyramidModel = glm::mat4(0.40f);
 
 	//wenus
 
-	glm::vec3 pyramidPos2 = glm::vec3(5.0f, 0.0f, 4.0f);
+	glm::vec3 pyramidPos2 = glm::vec3(-50.0f, 0.0f, 48.0f);
 	glm::mat4 pyramidModel2 = glm::mat4(1.2f);
 
 	//ziemia
-	glm::vec3 ziemiaPos = glm::vec3(9.0f, 0.0f, -5.0f);
+	glm::vec3 ziemiaPos = glm::vec3(60.0f, 0.0f, -70.0f);
 	glm::mat4 ziemiaModel = glm::mat4(1.2f);
 
 
 	//mars
-	glm::vec3 marsPos = glm::vec3(-18.0f, 0.0f, 0.740f);
+	glm::vec3 marsPos = glm::vec3(-84.0f, 0.0f,-90.0f);
 	glm::mat4 marsModel = glm::mat4(0.6f);
 
 
 	//jowisz
-	glm::vec3 jowiszPos = glm::vec3(+22.0f, 0.0f, 27.850f);
+	glm::vec3 jowiszPos = glm::vec3(-120.0f, -7.0f, 96.0f);
 	glm::mat4 jowiszModel = glm::mat4(14.0f);
 
 
 	//Saturn
-	glm::vec3 saturnPos = glm::vec3(-35.0f, 0.0f, -29.0f);//
+	glm::vec3 saturnPos = glm::vec3(150.0f, -6.0f, -140.0f);//
 	glm::mat4 saturnModel = glm::mat4(12.0f);
 
 
 
 	//Uran
-	glm::vec3 uranPos = glm::vec3(47.0f, 0.0f, 12.0f);//
+	glm::vec3 uranPos = glm::vec3(170.0f, 0.0f, -180.0f);//
 	glm::mat4 uranModel = glm::mat4(0.51f);
 
 
 	//Neptun
-	glm::vec3 neptunPos = glm::vec3(-68.0f, 0.0f, 25.0f);//
+	glm::vec3 neptunPos = glm::vec3(200.0f, 0.0f, -200.0f);//
 	glm::mat4 neptunModel = glm::mat4(0.49f);
 
-	glm::vec3 skyPos = glm::vec3(0.0f, -29.0f, 0.0f);//
-	glm::mat4 skyModel = glm::mat4(200.0f);
+	glm::vec3 skyPos = glm::vec3(0.0f, -250.0f, 0.0f);//
+	glm::mat4 skyModel = glm::mat4(500.0f);
 
 
 	lightShader.Activate();
