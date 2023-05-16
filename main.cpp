@@ -267,7 +267,6 @@ int main()
 	glm::vec4 lightColor = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
 	glm::vec3 lightPos = glm::vec3(0.0f, 0.0f, 0.0f);
 	glm::mat4 lightModel = glm::mat4(10.0f);
-	lightModel = glm::translate(lightModel, lightPos);
 
 	//merkury
 
@@ -356,7 +355,7 @@ int main()
 
 	glEnable(GL_DEPTH_TEST);
 
-	Camera camera(width, height, glm::vec3(0.0f, 0.0f, 2.0f));
+	Camera camera(width, height, glm::vec3(0.0f, 100.0f, 0.0f));
 
 	while (!glfwWindowShouldClose(window))
 	{
@@ -443,6 +442,7 @@ int main()
 
 
 		lightShader.Activate();
+		glUniformMatrix4fv(glGetUniformLocation(shaderProgram.ID, "model"), 1, GL_FALSE, glm::value_ptr(lightModel));
 		camera.Matrix(lightShader, "camMatrix");
 		lightVAO.Bind();
 		glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(int), GL_UNSIGNED_INT, 0);

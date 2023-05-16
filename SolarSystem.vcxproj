@@ -172,6 +172,7 @@
   <ItemGroup>
     <Image Include="brick.png" />
     <Image Include="pop_cat.png" />
+    <Image Include="sky.png" />
     <Image Include="ziemia.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
